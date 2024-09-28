@@ -1,38 +1,55 @@
-.App {
+* {padding: 0; margin: 0;}
+
+body {
+  /* background: rgba(92, 153, 153, 0.534); */
+}
+
+.appContainer {
+  /* background: rgba(163, 219, 71, 0.568); */
+  padding: 20px;
+  margin: 20px;
+}
+
+.todo-app {
+  background: rgba(155, 206, 206, 0.534);
+  box-shadow: 10px 10px 5px lightblue;
+  margin: 20px;
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
   text-align: center;
+  border-style: solid;
+  border-width: medium;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .container {display: flex; flex-direction: column;} */
+
+.todo-list {
+  list-style: none;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-item.completed span {
+  text-decoration: line-through;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter button {
+  margin: 5px;
+}
+
+button.active {
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  width: 70%;
+  margin-right: 10px;
 }
